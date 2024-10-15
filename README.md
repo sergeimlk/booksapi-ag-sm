@@ -14,6 +14,9 @@ Nous avons réalisé le maquettage de l'application avec **Figma**. Le travail d
 - Une navigation fluide entre ces écrans, assurée par le prototypage Figma.
 - La déclinaison de deux de ces écrans pour un usage desktop, en tenant compte des spécificités de ce support.
 
+Vous pouvez consulter notre prototype Figma en suivant ce lien : [Prototype Figma - Brief Bibliothèque](https://www.figma.com/proto/GvldMFs3xORch0KtudJml4/Brief_biblioth%C3%A8que?node-id=0-1&t=mBNgiLTPginBv8jp-1)
+
+
 ## Parcours Utilisateur et Accessibilité
 
 - Nous avons imaginé et conçu un **diagramme d'activité** représentant le parcours type d'un utilisateur souhaitant emprunter un livre, incluant chaque étape depuis la sélection du livre jusqu'à la confirmation de l'emprunt.
@@ -21,4 +24,4 @@ Nous avons réalisé le maquettage de l'application avec **Figma**. Le travail d
 
 Voici le diagramme UML représentant les interactions entre les entités de l'application :
 
-![Diagramme UML](./img/diagramme_uml.png)
+![Diagramme UML](./img/)
