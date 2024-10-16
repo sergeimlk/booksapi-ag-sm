@@ -144,6 +144,41 @@ body {
     }
 }
 
+/* Section images */
+.image-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+}
+
+.image-container {
+    flex: 1; 
+    max-width: 500px; 
+    aspect-ratio: 16 / 9; /* Pour que les div est la même dimension */
+    overflow: hidden;
+    border-radius: 8px; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .image-section {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+}
+
+
 
 /* Section Manga */
 .manga-section {
