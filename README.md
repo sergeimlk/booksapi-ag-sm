@@ -24,4 +24,4 @@ Vous pouvez consulter notre prototype Figma en suivant ce lien : [Prototype Figm
 
 Voici le diagramme UML représentant les interactions entre les entités de l'application :
 
-![Diagramme UML](./img/)
+![Diagramme UML](./img/User_Journey_Map_1.png)
