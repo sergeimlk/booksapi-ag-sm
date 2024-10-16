@@ -22,7 +22,10 @@ Vous pouvez consulter notre prototype Figma en suivant ce lien : [Prototype Figm
 ## Parcours Utilisateur et Accessibilité
 
 - Nous avons imaginé et conçu un **diagramme d'activité** représentant le parcours type d'un utilisateur souhaitant emprunter un livre, incluant chaque étape depuis la sélection du livre jusqu'à la confirmation de l'emprunt.
-- Un des écrans a été optimisé selon les critères du **RGAA** (Référentiel Général d’Amélioration de l’Accessibilité) pour garantir une meilleure accessibilité.
+
+- Nous avons également mis en évidence certains aspects de l’**accessibilité** en optimisant un des écrans selon les critères du **RGAA** (Référentiel Général d’Amélioration de l’Accessibilité). Pour plus de détails, vous pouvez consulter le RGAA à cette adresse : [RGAA officiel](https://www.numerique.gouv.fr/publications/rgaa-accessibilite/)
+
+Ces optimisations visent à améliorer l'expérience utilisateur pour les personnes en situation de handicap, en veillant notamment à la conformité des contrastes de couleurs, à la navigation au clavier, et à l'accessibilité des contenus visuels et textuels.
 
 Voici le diagramme UML représentant les interactions entre les entités de l'application :
 
