@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliomaniac </title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <nav class="navbar">
+                <div class="navbar-toggle" id="navbar-toggle">
+                    ☰
+                </div>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><a href="#">Books</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn btn-secondary">Sign In</a></li>
+                    <li><a href="#" class="btn btn-primary">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="manga-section">
+            <h2>Manga</h2>
+            <p>Les meilleurs manga du moment</p>
+            <div class="manga-list">
+                <article class="manga-item">
+                    <img src="../img/OnePiece.jpeg" alt="One Piece" class="manga-image">
+                    <div class="manga-content">
+                        <h3>One Piece</h3>
+                        <p>Luffy et ses alliés défient Kaido et Big Mom au sommet du dôme où sont rassemblés les principaux acteurs de la bataille en cours ! Mais sont-ils seulement en mesure de vaincre ce duo surpuissant ?!</p>
+                        <button class="btn">En Savoir Plus</button>
+                    </div>
+                </article>
+                <article class="manga-item">
+                    <img src="../img/dragonBall.jpg" alt="Dragon Ball" class="manga-image">
+                    <div class="manga-content">
+                        <h3>Dragon Ball</h3>
+                        <p>La Bible des fans de Dragon Ball, ce guide officiel de plus de 350 pages est composé de deux grandes parties : dans le guide de l'histoire, vous pourrez retrouver une présentation de chaque tome, des personnages principaux et secondaires ainsi qu'une rétrospective des plus grands combats et de chaque technique utilisée.</p>
+                        <button class="btn">En Savoir Plus</button>
+                    </div>
+                </article>
+                <article class="manga-item">
+                    <img src="../img/Yu-Gi-Oh-Tome-1.jpg" alt="YU-GI-OH" class="manga-image">
+                    <div class="manga-content">
+                        <h3>YU-GI-OH</h3>
+                        <p>Yugi Muto est un jeune lycéen comme les autres, un peu timide, qui vit avec son grand-père. Après de multiples tentatives, Yugi parvient à résoudre le mystère du puzzle millénaire. Se révèle alors une seconde personnalité, sombre, qui sommeillait en lui. Mêlant astuce et magie, Yugi donne des leçons à ceux qui font fausse route.</p>
+                        <button class="btn">En Savoir Plus</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="roman-section">
+            <h2>Roman Policier</h2>
+            <p>Les meilleures du moment</p>
+            <div class="roman-list">
+                <article class="roman-item">
+                    <img src="../img/Cartel.jpg" alt="Cartel 1011" class="roman-image">
+                    <div class="roman-content">
+                        <h3>Cartel 1011</h3>
+                        <p>La péninsule du Yucatán, entre le golfe du Mexique et la mer des Caraïbes. Des sites d'une beauté renversante.</p>
+                    </div>
+                </article>
+                <article class="roman-item">
+                    <img src="../img/La-psy.jpg" alt="La psy" class="roman-image">
+                    <div class="roman-content">
+                        <h3>La psy</h3>
+                        <p>Jeunes mariés, Tricia et Ethan recherchent la maison de leurs rêves. Alors qu'ils visitent un manoir isolé ayant appartenu au docteur.</p>
+                    </div>
+                </article>
+                <article class="roman-item">
+                    <img src="../img/L-ultime-avertiement.jpg" alt="L'ultime avertissement" class="roman-image">
+                    <div class="roman-content">
+                        <h3>L'ultime avertissement</h3>
+                        <p>L'ULTIME AVERTISSEMENT, UN THRILLER VERTIGINEUX : Cet avertissement est le dernier...</p>
+                    </div>
+                </article>
+                <article class="roman-item">
+                    <img src="../img/Sans-l-ombre-d-un-doute.jpg" alt="Mickey Haller" class="roman-image">
+                    <div class="roman-content">
+                        <h3>Mickey Haller</h3>
+                        <p>Mickey Haller et Harry Bosch unissent leurs forces pour sauver une innocente.</p>
+                    </div>
+                </article>
+                <article class="roman-item">
+                    <img src="../img/Les-Enchanteurs.jpg" alt="Quintette Los Angeles" class="roman-image">
+                    <div class="roman-content">
+                        <h3>Quintette Los Angeles</h3>
+                        <p>Los Angeles, 4 août 1962. La ville est en proie à la canicule, Marilyn Monroe vient de succomber à une overdose dans sa villa.</p>
+                    </div>
+                </article>
+                <article class="roman-item">
+                    <img src="../img/Mefie-toi.jpg" alt="Méfie-toi" class="roman-image">
+                    <div class="roman-content">
+                        <h3>Méfie-toi</h3>
+                        <p>Un meurtre, un ADN retrouvé sur la scène de crime et un suspect identifié. Problème, le suspect est décédé il y a trois ans...</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>© 2024 Bibliomaniac. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+    document.getElementById('navbar-toggle').addEventListener('click', function() {
+        const navbarMenu = document.getElementById('navbar-menu');
+        navbarMenu.classList.toggle('show');
+    });
+</script>
+
+</body>
+</html>
