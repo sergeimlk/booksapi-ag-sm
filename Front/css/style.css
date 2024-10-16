@@ -49,7 +49,7 @@ body {
     color: white;
 }
 
-/* Responsive Styling */
+/* Responsive Styling menu burger*/
 @media (max-width: 768px) {
     .navbar-menu {
         display: none;
@@ -74,21 +74,74 @@ body {
 
 /* Bouton Sign In */
 .btn-secondary {
-    background-color: #cccccc; /* Gris */
+    background-color: #cccccc; 
     color: black;
     border: 1px solid #cccccc;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.btn-secondary:hover {
+    background-color: #aaaaaa; 
+    color: white;
 }
 
 /* Bouton Register */
 .btn-primary {
-    background-color: #000000; /* Noir */
+    background-color: #000000; 
     color: white;
     border: 1px solid #000000;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
+
+.btn-primary:hover {
+    background-color: #333333; 
+    color: #f0f0f0; 
+}
+
 
 .btn {
     padding: 5px 15px;
     border-radius: 20px;
+}
+
+/* Section image avec le h1 et h2 */
+.hero {
+    position: relative;
+    left: 0;
+    min-height: 100vh; 
+    background: url('../img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png') no-repeat center center/cover; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-left: auto; 
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
+
+/* Responcive pour les téléphones */
+@media (max-width: 768px) {
+    .hero {
+        width: 100%; 
+        margin-left: 0;
+        background-size: cover; 
+        height: 60vh; 
+    }
 }
 
 
