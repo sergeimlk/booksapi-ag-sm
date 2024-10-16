@@ -16,6 +16,8 @@ Nous avons réalisé le maquettage de l'application avec **Figma**. Le travail d
 
 Vous pouvez consulter notre prototype Figma en suivant ce lien : [Prototype Figma - Brief Bibliothèque](https://www.figma.com/proto/GvldMFs3xORch0KtudJml4/Brief_biblioth%C3%A8que?node-id=0-1&t=mBNgiLTPginBv8jp-1)
 
+Vous pouvez aussi le consulter en pouvant le modifier ici : [Figma - Dev] (https://www.figma.com/design/GvldMFs3xORch0KtudJml4/Brief_biblioth%C3%A8que?node-id=0-1&m=dev&t=5JiwsVsTIczFlNuM-1)
+
 
 ## Parcours Utilisateur et Accessibilité
 
