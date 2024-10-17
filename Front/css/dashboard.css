@@ -1,0 +1,37 @@
+.section-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.section-item {
+    flex: 1 1 300px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.section-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .section-item {
+        flex: 1 1 45%; /* En pantallas medianas, los items ocupan el 45% del contenedor */
+        margin-bottom: 20px;
+    }
+}
+
+/* Media Query para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .section-item {
+        flex: 1 1 100%; /* En pantallas pequeñas, cada item ocupa el 100% del ancho */
+        margin-bottom: 20px;
+    }
+}
