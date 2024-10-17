@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Livre</title>
+    <link rel="stylesheet" href="../css/detail.css"> 
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-content">
+            <nav class="navbar">
+                <div class="navbar-toggle" id="navbar-toggle">
+                    ☰
+                </div>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><a href="#">Books</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn btn-secondary">Sign In</a></li>
+                    <li><a href="#" class="btn btn-primary">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="book-detail">
+        <div class="book-cover">
+            <img src="../img/dragonBall.jpg" alt="Couverture du livre" />
+        </div>
+        <div class="book-info">
+            <h1>Dragon Ball</h1>
+            <h2>Auteur : Akira Toriyama</h2>
+            <p><strong>Genre :</strong> Fiction, Aventure, Action</p>
+            <p><strong>Date de publication :</strong> 20 septembre 1984 (première publication au Japon)</p>
+            <p><strong>ISBN :</strong> 978-4-08-872216-5</p>
+            <p><strong>Description :</strong> La Bible des fans de Dragon Ball, ce guide officiel de plus de 350 pages est composé de deux grandes parties : dans le guide de l'histoire, vous pourrez retrouver une présentation de chaque tome, des personnages principaux et secondaires ainsi qu'une rétrospective des plus grands combats et de chaque technique utilisée.</p>
+            <button class="btn btn-primary">Ajouter au Panier</button>
+            <button class="btn btn-secondary">Lire un Extrait</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Bibliomaniac. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+    document.getElementById('navbar-toggle').addEventListener('click', function() {
+        const navbarMenu = document.getElementById('navbar-menu');
+        navbarMenu.classList.toggle('show');
+    });
+</script>
+</body>
+</html>
