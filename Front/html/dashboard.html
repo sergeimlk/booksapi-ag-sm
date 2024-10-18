@@ -18,11 +18,13 @@
                     ☰
                 </div>
                 <ul class="navbar-menu" id="navbar-menu">
+
                     <li><a href="#">Books</a></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#" class="btn btn-secondary">Sign In</a></li>
-                    <li><a href="#" class="btn btn-primary">Register</a></li>
+                    <li><a href="#">Private chats</a></li>
+                    <li><a href="#" class="btn btn-secondary"> Profile </a></li>
+                    <li><a href="#" class="btn btn-primary">Log out</a></li>
                 </ul>
             </nav>
         </div>
@@ -91,6 +93,14 @@
     <footer>
         <p>© 2024 Bibliomaniac. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        document.getElementById('navbar-toggle').addEventListener('click', function() {
+            const navbarMenu = document.getElementById('navbar-menu');
+            navbarMenu.classList.toggle('show');
+        });
+
+    </script>
 
 
 </body>
