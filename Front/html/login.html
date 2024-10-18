@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
-    <link rel="stylesheet" href="../css/login.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login Page</title>
+        <link rel="stylesheet" href="../css/login.css" />
+    </head>
 
-  <body>
-    <div class="login-container">
-      <div class="close-btn" onclick="closePage()">✖</div>
-      <div class="logo">
-        <img src="../img/logo.png" alt="Logo" class="logo-img" />
-      </div>
-      <h1>LOGIN</h1>
-      <p class="subtitle">
-        Children's Literature and the cultivation of children's Reading Ability
-      </p>
+    <body>
+        <div class="login-container">
+            <div class="close-btn" onclick="closePage()">✖</div>
+            <div class="logo">
+                <img src="../img/logo.png" alt="Logo" class="logo-img" />
+            </div>
+            <h1>LOGIN</h1>
+            <p class="subtitle">
+                Children's Literature and the cultivation of children's Reading
+                Ability
+            </p>
 
-      <form class="login-form" method="post">
-        <label for="username">Username</label>
-        <input type="text" id="username" placeholder="Username" />
+            <form class="login-form" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Username" />
 
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Password" />
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" />
 
-        <div class="forgot-password">
-          <a href="#">Forgot password?</a>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-btn">Login</button>
+
+                <div class="signup">
+                    <a href="#">Sign up →</a>
+                </div>
+            </form>
         </div>
 
-        <button type="submit" class="login-btn">Login</button>
-
-        <div class="signup">
-          <a href="#">Sign up →</a>
-        </div>
-      </form>
-    </div>
-
-    <script>
-      function closePage() {
-        window.location.href = "index.html";
-      }
-    </script>
-  </body>
+        <script>
+            function closePage() {
+                window.location.href = "index.html";
+            }
+        </script>
+    </body>
 </html>
