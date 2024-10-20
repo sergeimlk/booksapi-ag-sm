@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Luchito" />
+		<meta name="description" content="Chats list for Bibliomaniac" />
+		<title>Chats list</title>
+		<link rel="stylesheet" href="../css/chatlist.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header-content">
+				<nav class="navbar">
+					<div class="navbar-toggle" id="navbar-toggle">☰</div>
+					<ul class="navbar-menu" id="navbar-menu">
+						<li><a href="#">Books</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="dashboard.html">Community</a></li>
+						<li><a href="#" class="btn btn-secondary"> Profile </a></li>
+						<li><a href="#" class="btn btn-primary">Log out</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<h2>All chats</h2>
+			<div class="chat-container">
+				<button class="add-chat-btn">+</button>
+				<div class="chat-list">
+					<div class="chat-item">
+						<div class="profile-pic"></div>
+						<div class="chat-info">
+							<h3 class="chat-name">Juan Perez</h3>
+							<p class="last-message">I think we should see other people</p>
+						</div>
+					</div>
+
+					<div class="chat-item">
+						<div class="profile-pic"></div>
+						<div class="chat-info">
+							<h3 class="chat-name">Pedro Gomez</h3>
+							<p class="last-message">Earth is flat and i can prove it!</p>
+						</div>
+					</div>
+
+					<div class="chat-item">
+						<div class="profile-pic"></div>
+						<div class="chat-info">
+							<h3 class="chat-name">Jose Lopez</h3>
+							<p class="last-message">You didn't hear that from me ;)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<script>
+			document
+				.getElementById('navbar-toggle')
+				.addEventListener('click', function () {
+					const navbarMenu = document.getElementById('navbar-menu');
+					navbarMenu.classList.toggle('show');
+				});
+		</script>
+	</body>
+</html>
