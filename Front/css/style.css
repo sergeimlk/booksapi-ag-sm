@@ -1,4 +1,3 @@
-/* body */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -74,28 +73,28 @@ body {
 
 /* Bouton Sign In */
 .btn-secondary {
-    background-color: #cccccc; 
+    background-color: #cccccc;
     color: black;
     border: 1px solid #cccccc;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background-color: #aaaaaa; 
+    background-color: #aaaaaa;
     color: white;
 }
 
 /* Bouton Register */
 .btn-primary {
-    background-color: #000000; 
+    background-color: #000000;
     color: white;
     border: 1px solid #000000;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #333333; 
-    color: #f0f0f0; 
+    background-color: #333333;
+    color: #f0f0f0;
 }
 
 
@@ -108,18 +107,18 @@ body {
 .hero {
     position: relative;
     left: 0;
-    min-height: 100vh; 
-    background: url('../img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png') no-repeat center center/cover; 
+    min-height: 100vh;
+    background: url('../img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.5); 
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
 }
@@ -137,10 +136,10 @@ body {
 /* Responcive pour les téléphones */
 @media (max-width: 768px) {
     .hero {
-        width: 100%; 
+        width: 100%;
         margin-left: 0;
-        background-size: cover; 
-        height: 60vh; 
+        background-size: cover;
+        height: 60vh;
     }
 }
 
@@ -151,30 +150,31 @@ body {
     padding: 20px;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f0; 
+    background-color: #f0f0f0;
 }
 
 .image-container {
-    flex: 1; 
-    max-width: 500px; 
-    aspect-ratio: 16 / 9; /* Pour que les div est la même dimension */
+    flex: 1;
+    max-width: 500px;
+    aspect-ratio: 16 / 9;
+    /* Pour que les div est la même dimension */
     overflow: hidden;
-    border-radius: 8px; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    border-radius: 8px; 
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
     .image-section {
-        flex-direction: column; 
-        gap: 20px; 
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -243,11 +243,11 @@ body {
 /* Boutons En savoir plus */
 .manga-content .btn {
     align-self: start;
-    background: #cccccc; 
+    background: #cccccc;
     color: black;
     border: none;
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
