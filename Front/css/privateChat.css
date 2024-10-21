@@ -112,25 +112,16 @@ body {
 	position: relative; /* Para posicionar el botón en relación al contenedor */
 }
 .chat-list {
-	margin: 20px 0;
+	margin: 20px;
 }
 
 .chat-item {
 	display: flex;
 	align-items: center;
-	padding: 15px;
-	margin-bottom: 15px; /* Espacio entre cada chat */
-	background-color: #fafafa; /* Color de fondo para cada chat */
-	border-radius: 8px; /* Bordes redondeados para cada chat */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para cada chat individual */
-	text-decoration: none; /* Eliminar subrayado en los enlaces */
-	color: inherit; /* Mantener el color de texto estándar */
-	transition: background-color 0.3s ease; /* Suavizar el cambio de color al hacer hover */
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
 }
-.chat-item:hover {
-	background-color: #f0f0f0; /* Cambiar el fondo cuando pases el cursor */
-	cursor: pointer; /* Mostrar que es clickeable */
-}
+
 .profile-pic {
 	width: 50px; /* Ancho del círculo */
 	height: 50px; /* Alto del círculo */
@@ -146,7 +137,6 @@ body {
 .chat-name {
 	margin: 0; /* Eliminar margen del nombre */
 	font-size: 1.1em; /* Tamaño de fuente para el nombre */
-	color: #9747ff;
 }
 
 .last-message {
@@ -160,28 +150,123 @@ footer {
 	text-align: center;
 	padding: 10px;
 }
-.add-chat-btn {
-	position: absolute; /* Para posicionar el botón relativo al contenedor */
-	top: -10px; /* Ajusta la distancia desde el borde superior */
-	right: 10px; /* Ajusta la distancia desde el borde derecho */
-	width: 40px; /* Tamaño del círculo */
-	height: 40px; /* Tamaño del círculo */
-	border-radius: 50%; /* Hace el botón circular */
-	background-color: white; /* Color de fondo */
-	color: #9747ff; /* Color del símbolo "+" */
-	border: none; /* Quita el borde */
-	border-color: #9747ff;
-	border-width: 0.1cap;
-	border-style: solid;
-	font-size: 24px; /* Tamaño del símbolo "+" */
-	display: flex; /* Flexbox para centrar el símbolo */
-	justify-content: center; /* Centrar horizontalmente */
-	align-items: center; /* Centrar verticalmente */
-	cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle relieve */
-	transition: background-color 0.3s ease; /* Animación al hacer hover */
+
+/* Estilo para el encabezado del chat privado */
+.chat-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #333;
+	color: white;
 }
 
-.add-chat-btn:hover {
-	background-color: #333; /* Cambia el fondo al pasar el mouse */
+.chat-header .chat-title {
+	margin: 0;
+	font-size: 1.2em;
+}
+
+.close-chat-btn {
+	background-color: transparent;
+	border: none;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+/* Contenedor para los mensajes */
+.chat-messages {
+	height: calc(
+		100vh - 160px
+	); /* Ajusta la altura para que ocupe el espacio restante */
+	padding: 20px;
+	overflow-y: auto;
+	background-color: #f9f9f9;
+}
+
+/* Estilo para el cuadro de entrada de texto */
+.chat-input-container {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	background-color: white;
+	border-top: 1px solid #ccc;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.chat-input {
+	flex-grow: 1;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	font-size: 16px;
+	margin-right: 10px;
+	outline: none;
+}
+
+.mic-btn {
+	background-color: #007bff;
+	border: none;
+	color: white;
+	font-size: 20px;
+	padding: 10px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mic-btn:hover {
+	background-color: #0056b3;
+}
+
+.chat-messages {
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.message {
+	max-width: 60%;
+	padding: 10px;
+	border-radius: 15px;
+	position: relative;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.message.left {
+	align-self: flex-start;
+	background-color: #f1f0f0;
+	border-top-left-radius: 0;
+}
+
+.message.right {
+	align-self: flex-end;
+	background-color: #007bff;
+	color: white;
+	border-top-right-radius: 0;
+}
+
+.message-text {
+	margin: 0;
+	word-wrap: break-word;
+}
+
+.message-time {
+	font-size: 12px;
+	color: #666;
+	text-align: right;
+	display: block;
+	margin-top: 5px;
+}
+
+.message.right .message-time {
+	color: #e0e0e0;
 }

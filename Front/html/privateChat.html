@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Luchito" />
+		<meta title="Private Chat" />
+		<link rel="stylesheet" href="../css/privateChat.css" />
+	</head>
+
+	<body>
+		<header class="header">
+			<div class="header-content">
+				<nav class="navbar">
+					<div class="navbar-toggle" id="navbar-toggle">☰</div>
+					<ul class="navbar-menu" id="navbar-menu">
+						<li><a href="allBooks.html">Books</a></li>
+						<li><a href="../../index.html">Home</a></li>
+						<li><a href="#">Contact</a></li>
+						<li><a href="dashboard.html">Community</a></li>
+						<li><a href="#" class="btn btn-secondary"> Profile </a></li>
+						<li><a href="#" class="btn btn-primary">Log out</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="chat-header">
+				<button class="close-chat-btn">← Back to chats</button>
+				<h2 class="chat-title">Private Chat with Juan Perez</h2>
+			</div>
+
+			<div class="chat-messages">
+				<!-- Mensaje de la otra persona -->
+				<div class="message left">
+					<p class="message-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+					</p>
+					<span class="message-time">10:01 AM</span>
+				</div>
+				<!-- Tu mensaje -->
+				<div class="message right">
+					<p class="message-text">
+						Nulla facilisi. Curabitur vel dapibus magna.
+					</p>
+					<span class="message-time">10:02 AM</span>
+				</div>
+				<!-- Mensaje de la otra persona -->
+				<div class="message left">
+					<p class="message-text">
+						Suspendisse vitae erat ut leo fermentum scelerisque.
+					</p>
+					<span class="message-time">10:03 AM</span>
+				</div>
+				<!-- Tu mensaje -->
+				<div class="message right">
+					<p class="message-text">In hac habitasse platea dictumst.</p>
+					<span class="message-time">10:04 AM</span>
+				</div>
+				<!-- Mensaje de la otra persona -->
+				<div class="message left">
+					<p class="message-text">
+						Praesent convallis magna ut massa consectetur, vitae tincidunt arcu
+						aliquet.
+					</p>
+					<span class="message-time">10:05 AM</span>
+				</div>
+				<!-- Tu mensaje -->
+				<div class="message right">
+					<p class="message-text">
+						Sed ultricies eros eget quam aliquam posuere.
+					</p>
+					<span class="message-time">10:06 AM</span>
+				</div>
+			</div>
+
+			<div class="chat-input-container">
+				<input type="text" class="chat-input" placeholder="Type a message..." />
+				<button class="mic-btn">🎤</button>
+			</div>
+		</main>
+
+		<script>
+			document
+				.getElementById('navbar-toggle')
+				.addEventListener('click', function () {
+					const navbarMenu = document.getElementById('navbar-menu');
+					navbarMenu.classList.toggle('show');
+				});
+			document
+				.querySelector('.close-chat-btn')
+				.addEventListener('click', function () {
+					window.location.href = '../html/chatsList.html';
+				});
+		</script>
+	</body>
+</html>
