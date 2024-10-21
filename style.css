@@ -145,6 +145,7 @@ body {
 
 /* Section images */
 .image-section {
+	height: 450px;
 	display: flex;
 	gap: 20px;
 	padding: 20px;
@@ -155,7 +156,7 @@ body {
 
 .image-container {
 	flex: 1;
-	max-width: 500px;
+	max-width: 600px;
 	aspect-ratio: 16 / 9;
 	/* Pour que les div est la même dimension */
 	overflow: hidden;
@@ -180,10 +181,11 @@ body {
 
 /* Section Manga */
 .manga-section {
+	
 	background: #ffffff;
 	border-radius: 8px;
 	padding: 20px;
-	max-width: 800px;
+	max-width: 1200px;
 	margin: 0 auto;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
@@ -261,8 +263,8 @@ body {
 	background: #ffffff;
 	border-radius: 8px;
 	padding: 20px;
-	max-width: 800px;
-	margin: 20px auto;
+	max-width: 1200px;
+	margin: 20px  auto;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -279,8 +281,8 @@ body {
 
 .roman-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 20px;
+  	grid-template-columns: repeat(3, 1fr);
+  	gap: 20px;
 }
 
 .roman-item {
