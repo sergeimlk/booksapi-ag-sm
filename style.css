@@ -181,7 +181,6 @@ body {
 
 /* Section Manga */
 .manga-section {
-	
 	background: #ffffff;
 	border-radius: 8px;
 	padding: 20px;
@@ -317,6 +316,14 @@ body {
 	font-size: 14px;
 	color: #666;
 	line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+	.roman-list {
+		display: flex;
+	flex-direction: column;
+	gap: 20px;
+	}
 }
 
 /* Footer class */

@@ -130,7 +130,7 @@ h1 {
 }
 
 .book-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-15px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -154,7 +154,7 @@ h1 {
 
 .btn:hover {
     background-color: #333;
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 footer {
