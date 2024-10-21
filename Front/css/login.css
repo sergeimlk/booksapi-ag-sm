@@ -4,14 +4,15 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #f0f0f0;
 }
 
 .login-container {
-    background-color: #c49bf1;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 15px;
     width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
     text-align: center;
 }
@@ -22,6 +23,7 @@ body {
     right: 10px;
     cursor: pointer;
     font-size: 18px;
+    color: #888;
 }
 
 .logo {
@@ -34,13 +36,13 @@ body {
 }
 
 h1 {
-    color: #fff;
+    color: #333;
     font-size: 24px;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #fff;
+    color: #666;
     font-size: 14px;
     margin-bottom: 20px;
 }
@@ -52,7 +54,7 @@ h1 {
 }
 
 .login-form label {
-    color: #fff;
+    color: #555;
     font-size: 14px;
     text-align: left;
     margin-left: 10px;
@@ -61,10 +63,10 @@ h1 {
 .login-form input {
     padding: 10px;
     border-radius: 25px;
-    border: none;
+    border: 1px solid #ddd; 
+    background-color: #f9f9f9; 
+    color: #333;
     outline: none;
-    background-color: #d6a7f3;
-    color: #fff;
 }
 
 .forgot-password {
@@ -73,7 +75,7 @@ h1 {
 }
 
 .forgot-password a {
-    color: #fff;
+    color: #888;
     font-size: 12px;
     text-decoration: none;
 }
@@ -82,10 +84,14 @@ h1 {
     padding: 10px;
     border: none;
     border-radius: 25px;
-    background-color: #fff;
-    color: #d6a7f3;
+    background-color: #888;
+    color: #ffffff;
     cursor: pointer;
     font-size: 16px;
+}
+
+.login-btn:hover {
+    background-color: #555; 
 }
 
 .signup {
@@ -93,7 +99,11 @@ h1 {
 }
 
 .signup a {
-    color: #fff;
+    color: #888;
     text-decoration: none;
     font-size: 14px;
+}
+
+.signup a:hover {
+    color: #555;
 }
