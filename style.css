@@ -121,8 +121,10 @@ body {
 
 .hero-content {
 	background: rgba(0, 0, 0, 0.5);
-	padding: 20px;
-	border-radius: 8px;
+	padding: 15px;
+	border-radius: 30px;
+	margin-top: -26rem;
+	width: 20%;
 }
 
 .hero h1 {
@@ -136,12 +138,19 @@ body {
 }
 
 /* Responcive pour les téléphones */
-@media (max-width: 768px) {
+@media (max-width: 768px 900px) {
 	.hero {
 		width: 100%;
 		margin-left: 0;
 		background-size: cover;
 		height: 60vh;
+	}
+	.hero-content {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 15px;
+		border-radius: 30px;
+		margin-top: -32rem;
+		width: 90%;
 	}
 }
 
