@@ -40,6 +40,44 @@ body {
     text-decoration: none;
 }
 
+/* SEARCHBAR / BTN */
+#search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right : 4rem;
+}
+#search {
+    margin-right: 10px;
+    width: 15rem;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #cc0000;
+}
+
+#book-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+}
+
 /* Menu burger */
 .navbar-toggle {
     display: none;

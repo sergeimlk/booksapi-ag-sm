@@ -48,6 +48,7 @@ body {
 	color: white;
 }
 
+
 /* Responsive Styling menu burger*/
 @media (max-width: 768px) {
 	.navbar-menu {
@@ -104,17 +105,18 @@ body {
 
 /* Section image avec le h1 et h2 */
 .hero {
-	position: relative;
-	left: 0;
-	min-height: 100vh;
-	background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png')
-		no-repeat center center/cover;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	color: white;
-	margin-left: auto;
+    position: relative;
+    left: 0;
+    min-height: 50vh; /* Réduit la hauteur minimale de la section */
+    background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png')
+        no-repeat center center;
+    background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-left: auto;
 }
 
 .hero-content {

@@ -4,12 +4,21 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Bibliomaniac - Tous les Livres</title>
-		<link rel="stylesheet" href="../css/allBokks.css" />
+		<link rel="stylesheet" href="../css/allBooks.css" />
 	</head>
 	<body>
 		<header class="header">
 			<div class="header-content">
 				<nav class="navbar">
+					
+					<div id="search-container">
+						<input type="text" id="search" placeholder="Rechercher des livres...">
+						<button id="searchBtn">Rechercher</button>
+					</div>
+					<br><br>
+					<div id="results"></div>
+			
+					
 					<div class="navbar-toggle" id="navbar-toggle">☰</div>
 					<ul class="navbar-menu" id="navbar-menu">
 						<li><a href="allBooks.html">Books</a></li>
@@ -60,13 +69,7 @@
 			<p>© 2024 Bibliomaniac. Tous droits réservés.</p>
 		</footer>
 
-		<script>
-			document
-				.getElementById('navbar-toggle')
-				.addEventListener('click', function () {
-					const navbarMenu = document.getElementById('navbar-menu');
-					navbarMenu.classList.toggle('show');
-				});
+		<script src="/fetch.js">
 		</script>
 	</body>
 </html>
