@@ -57,17 +57,6 @@ searchBtn.addEventListener("click", function () {
   searchInput.value = "";
 });
 
-function getIdInUrl() {
-  const queryString_url_id = window.location.search;
-  console.log("queryString_url_id", queryString_url_id);
-  const urlParams = new URLSearchParams(queryString_url_id);
-  console.log("urlParams", urlParams);
-  const theId = urlParams.get("id");
-  console.log("theId", theId);
-  // Convertir theId en nombre pour la comparaison
-  const numericId = Number(theId);
-}
-
 function displayBooks(datas) {
   mesLivres.innerHTML = "";
   bookGrid.innerHTML = "";
@@ -77,24 +66,29 @@ function displayBooks(datas) {
   //pas de .length sur totalItems car c'est un nombre et items est un tableau
   if (datas.totalItems > 0 && datas.items.length > 0) {
     datas.items.forEach((book) => {
+      const bookId = book.id;
       const title = book.volumeInfo.title;
-      const cover = book.volumeInfo.imageLinks.thumbnail;
+      const cover =
+        book.volumeInfo.imageLinks?.thumbnail || "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! changer le lien
       const author = book.volumeInfo.authors;
       const bookLink = document.createElement("a");
-      bookLink.href = `book.html?id=${book.id}`;
+      bookLink.href = `BooksDetail.html?id=${bookId}`;
       const bookCardDiv = document.createElement("div");
       bookCardDiv.classList.add("book-card");
       bookCardDiv.innerHTML = `<h2>${title}</h2>
       <p>Auteur : ${author}</p>
       <img src="${cover}" alt="cover" />
-      <a href="${link}" target="_blank">Lien vers le livre</a>`;
-
-      bookGrid.appendChild(bookCardDiv);
+     `;
+      //<a href="${link}" target="_blank">Lien vers le livre</a>
+      bookLink.appendChild(bookCardDiv);
+      bookGrid.appendChild(bookLink);
 
       results.push(title);
       // console.log("results", results);
       console.log("totalItems", datas.totalItems);
       console.log("title du book", title);
+      console.log("id du book", bookId);
+
       ///////// création de li pour le test
       // const li = document.createElement("li");
       // li.textContent = title;
