@@ -23,18 +23,17 @@ async function getBookDetails() {
 
 getBookDetails();
 
-// function displayBookDetails(datas) {
-//     const book = datas.volumeInfo;
-//     console.log(book);
-//     const bookDetails = document.createElement("div");
-//     bookDetails.classList.add("bookDetails");
-//     bookDetails.innerHTML = `
-//     <h2>${book.title}</h2>
-//     <h3>${book.authors}</h3>
-//     <img src="${book.imageLinks.thumbnail}" alt="${book.title}">
-//     <p>${book.description}</p>
-//     <a href="${book.previewLink}" target="_blank">Preview</a>
-//     `;
-//     mesLivres.appendChild(bookDetails);
-
-// }
+function displayBookDetails(datas) {
+  const book = datas.volumeInfo;
+  console.log(book);
+  const bookDetails = document.createElement("div");
+  bookDetails.classList.add("bookDetails");
+  bookDetails.innerHTML = `
+    <h2>${book.title}</h2>
+    <h3>${book.authors}</h3>
+    <img src="${book.imageLinks.thumbnail}" alt="${book.title}">
+    <p>${book.description}</p>
+    <a href="${book.previewLink}" target="_blank">Preview</a>
+    `;
+  mesLivres.appendChild(bookDetails);
+}
