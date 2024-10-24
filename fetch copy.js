@@ -1,4 +1,3 @@
-
 const searchInput = document.getElementById("search");
 const searchBtn = document.getElementById("searchBtn");
 const apiKey = 'AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90';
@@ -9,7 +8,6 @@ async function getBooks(searchUser) {
             `https://www.googleapis.com/books/v1/volumes?q=${searchUser}&key=${apiKey}`
         );
         const data = await response.json();
-
         if (response.ok) {
             let books = data.items;
             let output = "";
@@ -27,21 +25,38 @@ async function getBooks(searchUser) {
         } else {
             console.error('Erreur de l\'API:', data.error.message);
         }
+        console.log(data);
+        afficherResultats(data);
     } catch (error) {
-        console.error('Erreur lors de la récupération des données', error);
+        console.error(error);
     }
 }
 
-searchBtn.addEventListener("click", function () {
+function afficherResultats(data) {
+    const resultsDiv = document.getElementById('results');
+    resultsDiv.innerHTML = ''; // Clear previous results
+    data.items.forEach(item => {
+        const book = item.volumeInfo;
+        const bookDiv = document.createElement('div');
+        bookDiv.classList.add('book-item');
+        bookDiv.innerHTML = `
+            <h2>${book.title}</h2>
+            <p>Auteur(s): ${book.authors ? book.authors.join(', ') : 'N/A'}</p>
+            <p>Description: ${book.description ? book.description : 'Pas de description disponible'}</p>
+        `;
+        resultsDiv.appendChild(bookDiv);
+    });
+}
+
+function handleSearch() {
     getBooks(searchInput.value);
     console.log(searchInput.value);
     searchInput.value = "";
-});
+}
 
+searchBtn.addEventListener("click", handleSearch);
 searchInput.addEventListener("keypress", function (e) {
     if (e.key === 'Enter') {
-        getBooks(searchInput.value);
-        console.log(searchInput.value);
-        searchInput.value = "";
+        handleSearch();
     }
 });
