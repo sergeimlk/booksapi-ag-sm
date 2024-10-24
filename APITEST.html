@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test Asynchrone</title>
+    <style>
+        #search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            background-color: #7d0f0f;
+            padding: 20px;
+            border-radius: 20rem;
+        }
+
+        #search {
+            width: 50%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px 0 0 4px;
+            outline: none;
+        }
+
+        #searchBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-left: none;
+            background-color: #ff0000;
+            color: white;
+            border-radius: 0 20px 0 0;
+            cursor: pointer;
+        }
+
+        #searchBtn:hover {
+            background-color: #cc0000;
+        }
+
+        #book-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="search-container">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Rechercher des livres...">
+            <button id="searchBtn">Rechercher</button>
+        </div>
+        <br><br>
+        <h1>Résultats de la Recherche</h1> 
+        <div id="results"></div>
+
+    </div>
+
+    <script>
+        const searchInput = document.getElementById("search");
+        const searchBtn = document.getElementById("searchBtn");
+        const apiKey = 'AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90';
+        // const search = 'harry potter';
+
+        async function getBooks(searchUser) {
+            try {
+                const response = await fetch(
+                    `https://www.googleapis.com/books/v1/volumes?q=${searchUser}&key=${apiKey}`
+                );
+                const data = await response.json();
+                console.log(data);
+            }
+            catch (error) {
+                console.error(error);
+            }
+        }
+
+        getBooks();
+
+        searchBtn.addEventListener("click", function () {
+            getBooks(searchInput.value);
+            console.log(searchInput.value);
+            searchInput.value = "";
+
+        })
+    </script>
+</body>
+
+</html>
