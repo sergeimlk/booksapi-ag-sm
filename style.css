@@ -137,22 +137,38 @@ body {
 	margin: 10px 0 0;
 }
 
-/* Responcive pour les téléphones */
-@media (max-width: 768px 900px) {
-	.hero {
-		width: 100%;
-		margin-left: 0;
-		background-size: cover;
-		height: 60vh;
-	}
-	.hero-content {
-		background: rgba(0, 0, 0, 0.5);
-		padding: 15px;
-		border-radius: 30px;
-		margin-top: -32rem;
-		width: 90%;
-	}
+/* Responsive pour les téléphones */
+@media (max-width: 768px) {
+    .hero {
+        width: 100%;
+        margin-left: 0;
+        background-size: cover;
+        height: 60vh;
+    }
+    .hero-content {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        border-radius: 30px;
+        margin-top: -32rem;
+        width: 90%;
+    }
 }
+@media (max-width: 1365px) {
+    .hero {
+        width: 100%;
+        margin-left: 0;
+        background-size: cover;
+        height: 60vh;
+    }
+    .hero-content {
+        background: rgba(0, 0, 0, 0.5);
+        padding: 15px;
+        border-radius: 30px;
+        margin-top: -32rem;
+        width: 100%;
+    }
+}
+
 
 /* Section images */
 .image-section {
