@@ -20,7 +20,7 @@
             padding: 10px;
             font-size: 16px;
             border: 1px solid #ddd;
-            border-radius: 20px 0 0 4px;
+            border-radius: 20px 0 0 20px;
             outline: none;
         }
 
@@ -31,7 +31,7 @@
             border-left: none;
             background-color: #ff0000;
             color: white;
-            border-radius: 0 20px 0 0;
+            border-radius: 0 20px 20px 0;
             cursor: pointer;
         }
 
@@ -39,29 +39,35 @@
             background-color: #cc0000;
         }
 
-        #book-item {
+        .book-item {
             border: 1px solid #ddd;
             padding: 10px;
             margin: 10px;
+            text-align: center;
+        }
+
+        .book-item img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto 10px;
         }
     </style>
 </head>
 
 <body>
-        <div class="search-container">
-            <input type="text" id="search" placeholder="Rechercher des livres...">
-            <button id="searchBtn">Rechercher</button>
-        </div>
-        <br><br>
-        <h1>Résultats de la Recherche</h1> 
-        <div id="results"></div>
-
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Rechercher des livres...">
+        <button id="searchBtn">Rechercher</button>
+    </div>
+    <br><br>
+    <h1>Résultats de la Recherche</h1>
+    <div id="results"></div>
 
     <script>
         const searchInput = document.getElementById("search");
         const searchBtn = document.getElementById("searchBtn");
         const apiKey = 'AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90';
-        // const search = 'harry potter';
 
         async function getBooks(searchUser) {
             try {
@@ -69,21 +75,42 @@
                     `https://www.googleapis.com/books/v1/volumes?q=${searchUser}&key=${apiKey}`
                 );
                 const data = await response.json();
-                console.log(data);
-            }
-            catch (error) {
-                console.error(error);
+
+                if (response.ok) {
+                    let books = data.items;
+                    let output = "";
+                    books.forEach(book => {
+                        output += `
+                        <div class="book-item">
+                            <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/100'}" alt="${book.volumeInfo.title}">
+                            <h2>${book.volumeInfo.title}</h2>
+                            <p>Auteur(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'N/A'}</p>
+                            <p>Description: ${book.volumeInfo.description ? book.volumeInfo.description : 'Pas de description disponible'}</p>
+                        </div>
+                        `;
+                    });
+                    document.getElementById("results").innerHTML = output;
+                } else {
+                    console.error('Erreur de l\'API:', data.error.message);
+                }
+            } catch (error) {
+                console.error('Erreur lors de la récupération des données', error);
             }
         }
-
-        getBooks();
 
         searchBtn.addEventListener("click", function () {
             getBooks(searchInput.value);
             console.log(searchInput.value);
             searchInput.value = "";
+        });
 
-        })
+        searchInput.addEventListener("keypress", function (e) {
+            if (e.key === 'Enter') {
+                getBooks(searchInput.value);
+                console.log(searchInput.value);
+                searchInput.value = "";
+            }
+        });
     </script>
 </body>
 

@@ -21,6 +21,40 @@ body {
 	padding: 20px;
 }
 
+
+/* SEARCHBAR / BTN */
+#search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right : 4rem;
+}
+#search {
+    margin-right: 10px;
+    width: 15rem;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-left: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+#searchBtn:hover {
+    background-color: #cc0000;
+}
+
+
 .navbar {
 	display: flex;
 	justify-content: space-between;
@@ -74,9 +108,9 @@ body {
 
 /* Bouton Sign In */
 .btn-secondary {
-	background-color: #cccccc;
+	background-color: #ff0000;
 	color: black;
-	border: 1px solid #cccccc;
+	border: 1px solid #ff0000;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -271,7 +305,7 @@ body {
 /* Boutons En savoir plus */
 .manga-content .btn {
 	align-self: start;
-	background: #cccccc;
+	background: #ff0000;
 	color: black;
 	border: none;
 	padding: 8px 12px;

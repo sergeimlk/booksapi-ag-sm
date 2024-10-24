@@ -111,9 +111,9 @@ body {
 
 /* Bouton Sign In */
 .btn-secondary {
-    background-color: #cccccc;
+    background-color: #ff0000;
     color: black;
-    border: 1px solid #cccccc;
+    border: 1px solid #ff0000;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
