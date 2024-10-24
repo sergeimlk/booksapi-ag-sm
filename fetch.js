@@ -1,4 +1,3 @@
-
 const searchInput = document.getElementById("search");
 const searchBtn = document.getElementById("searchBtn");
 const apiKey = 'AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90';
@@ -12,10 +11,10 @@ async function getBooks(searchUser) {
 
         if (response.ok) {
             let books = data.items;
-            let output = "";
+            let output = '<div class="book-grid">';
             books.forEach(book => {
                 output += `
-                <div class="book-item">
+                <div class="book-card">
                     <img src="${book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.thumbnail : 'https://via.placeholder.com/100'}" alt="${book.volumeInfo.title}">
                     <h2>${book.volumeInfo.title}</h2>
                     <p>Auteur(s): ${book.volumeInfo.authors ? book.volumeInfo.authors.join(', ') : 'N/A'}</p>
@@ -23,6 +22,7 @@ async function getBooks(searchUser) {
                 </div>
                 `;
             });
+            output += '</div>';
             document.getElementById("results").innerHTML = output;
         } else {
             console.error('Erreur de l\'API:', data.error.message);

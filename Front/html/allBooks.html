@@ -1,76 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Bibliomaniac - Tous les Livres</title>
-		<link rel="stylesheet" href="../css/allBooks.css" />
-	</head>
-	<body>
-		<header class="header">
-			<div class="header-content">
-				<nav class="navbar">
-					
-					<div id="search-container">
-						<input type="text" id="search" placeholder="Rechercher des livres...">
-						<button id="searchBtn">Rechercher</button>
-					</div>
-					<br><br>
-					<!-- <div id="results"></div> -->
-			
-					
-					<div class="navbar-toggle" id="navbar-toggle">☰</div>
-					<ul class="navbar-menu" id="navbar-menu">
-						<li><a href="allBooks.html">Books</a></li>
-						<li><a href="../../index.html">Home</a></li>
-						<li><a href="Front/html/dashboard.html">Dashboard</a></li>
-						<li><a href="#">Contact</a></li>
-						<li>
-							<a href="login.html" class="btn btn-secondary">Sign In</a>
-						</li>
-						<li>
-							<a href="#" class="btn btn-primary">Register</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bibliomaniac - Tous les Livres</title>
+    <link rel="stylesheet" href="../css/allBooks.css" />
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <nav class="navbar">
+                <div id="search-container">
+                    <input type="text" id="search" placeholder="Rechercher des livres...">
+                    <button id="searchBtn">Rechercher</button>
+                </div>
+                <br><br>
+                <div class="navbar-toggle" id="navbar-toggle">☰</div>
+                <ul class="navbar-menu" id="navbar-menu">
+                    <li><a href="allBooks.html">Books</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="Front/html/dashboard.html">Dashboard</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li>
+                        <a href="login.html" class="btn btn-secondary">Sign In</a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-primary">Register</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-		<main class="library">
-			<h1>Découvrez nos Livres</h1>
-			<div class="book-grid">
-				<div class="book-card">
-					<img src="../img/OnePiece.jpeg" alt="Couverture de One Piece" />
-					<h2>${book.volumeInfo.title}</h2>
-					<p>Auteur : Eiichiro Oda</p>
-					<a href="OnePiece.html">
-						<button class="btn btn-primary">Voir les détails</button>
-					</a>
-				</div>
-				<div class="book-card">
-					<img src="../img/Yu-Gi-Oh-Tome-1.jpg" alt="Couverture de Yu-Gi-Oh!" />
-					<h2>Yu-Gi-Oh!</h2>
-					<p>Auteur : Kazuki Takahashi</p>
-					<a href="YuGiOh.html">
-						<button class="btn btn-primary">Voir les détails</button>
-					</a>
-				</div>
-				<div class="book-card">
-					<img src="../img/dragonBall.jpg" alt="Couverture de Dragon Ball" />
-					<h2>Dragon Ball</h2>
-					<p>Auteur : Akira Toriyama</p>
-					<a href="BooksDetail.html">
-						<button class="btn btn-primary">Voir les détails</button>
-					</a>
-				</div>
-			</div>
-		</main>
+    <main class="library">
+        <h1>Découvrez nos Livres</h1>
+        <div class="book-grid" id="results">
+            <!-- Les résultats de la recherche seront affichés ici -->
+        </div>
+    </main>
 
-		<footer>
-			<p>© 2024 Bibliomaniac. Tous droits réservés.</p>
-		</footer>
+    <footer>
+        <p>© 2024 Bibliomaniac. Tous droits réservés.</p>
+    </footer>
 
-		<script src="/fetch.js">
-		</script>
-	</body>
+    <script src="../../fetch.js"></script>
+</body>
 </html>
