@@ -1,34 +1,34 @@
 body {
-	font-family: 'Arial', sans-serif;
-	margin: 0;
-	padding: 0;
-	background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 
 /* Header */
 .header {
-	position: relative;
-	text-align: center;
-	color: white;
+    position: relative;
+    text-align: center;
+    color: white;
 }
 
 .header-content {
-	display: flex;
-	justify-content: end;
-	position: relative;
-	z-index: 2;
-	background: rgba(0, 0, 0, 0.5);
-	padding: 20px;
+    display: flex;
+    justify-content: end;
+    position: relative;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
 }
-
 
 /* SEARCHBAR / BTN */
 #search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right : 4rem;
+    margin-right: 4rem;
 }
+
 #search {
     margin-right: 10px;
     width: 15rem;
@@ -54,87 +54,85 @@ body {
     background-color: #cc0000;
 }
 
-
 .navbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-menu {
-	list-style: none;
-	padding: 0;
-	display: flex;
-	gap: 20px;
-	margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    margin: 0;
 }
 
 .navbar a {
-	color: white;
-	text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 /* Menu burger */
 .navbar-toggle {
-	display: none;
-	font-size: 24px;
-	cursor: pointer;
-	color: white;
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
 
-
-/* Responsive Styling menu burger*/
+/* Responsive Styling menu burger */
 @media (max-width: 768px) {
-	.navbar-menu {
-		display: none;
-		flex-direction: column;
-		background-color: rgba(0, 0, 0, 0.8);
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		padding: 10px 0;
-		z-index: 1;
-	}
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 10px 0;
+        z-index: 1;
+    }
 
-	.navbar-menu.show {
-		display: flex;
-	}
+    .navbar-menu.show {
+        display: flex;
+    }
 
-	.navbar-toggle {
-		display: block;
-	}
+    .navbar-toggle {
+        display: block;
+    }
 }
 
 /* Bouton Sign In */
 .btn-secondary {
-	background-color: #ff0000;
-	color: black;
-	border: 1px solid #ff0000;
-	transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #ff0000;
+    color: black;
+    border: 1px solid #ff0000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-secondary:hover {
-	background-color: #aaaaaa;
-	color: white;
+    background-color: #aaaaaa;
+    color: white;
 }
 
 /* Bouton Register */
 .btn-primary {
-	background-color: #000000;
-	color: white;
-	border: 1px solid #000000;
-	transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #000000;
+    color: white;
+    border: 1px solid #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary:hover {
-	background-color: #333333;
-	color: #f0f0f0;
+    background-color: #333333;
+    color: #f0f0f0;
 }
 
 .btn {
-	padding: 5px 15px;
-	border-radius: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
 }
 
 /* Section image avec le h1 et h2 */
@@ -142,8 +140,7 @@ body {
     position: relative;
     left: 0;
     min-height: 50vh; /* Réduit la hauteur minimale de la section */
-    background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png')
-        no-repeat center center;
+    background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png') no-repeat center center;
     background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
     display: flex;
     align-items: center;
@@ -154,21 +151,21 @@ body {
 }
 
 .hero-content {
-	background: rgba(0, 0, 0, 0.5);
-	padding: 15px;
-	border-radius: 30px;
-	margin-top: -26rem;
-	width: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 30px;
+    margin-top: -26rem;
+    width: 20%;
 }
 
 .hero h1 {
-	font-size: 48px;
-	margin: 0;
+    font-size: 48px;
+    margin: 0;
 }
 
 .hero p {
-	font-size: 18px;
-	margin: 10px 0 0;
+    font-size: 18px;
+    margin: 10px 0 0;
 }
 
 /* Responsive pour les téléphones */
@@ -179,6 +176,7 @@ body {
         background-size: cover;
         height: 60vh;
     }
+
     .hero-content {
         background: rgba(0, 0, 0, 0.5);
         padding: 15px;
@@ -187,6 +185,7 @@ body {
         width: 90%;
     }
 }
+
 @media (max-width: 1365px) {
     .hero {
         width: 100%;
@@ -194,6 +193,7 @@ body {
         background-size: cover;
         height: 60vh;
     }
+
     .hero-content {
         background: rgba(0, 0, 0, 0.5);
         padding: 15px;
@@ -203,194 +203,257 @@ body {
     }
 }
 
-
 /* Section images */
 .image-section {
-	height: 450px;
-	display: flex;
-	gap: 20px;
-	padding: 20px;
-	justify-content: center;
-	align-items: center;
-	background-color: #f0f0f0;
+    height: 450px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
 }
 
 .image-container {
-	flex: 1;
-	max-width: 600px;
-	aspect-ratio: 16 / 9;
-	/* Pour que les div est la même dimension */
-	overflow: hidden;
-	border-radius: 8px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 600px;
+    aspect-ratio: 16 / 9;
+    /* Pour que les div est la même dimension */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .image-container img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-	.image-section {
-		flex-direction: column;
-		gap: 20px;
-	}
+    .image-section {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 /* Section Manga */
 .manga-section {
-	background: #ffffff;
-	border-radius: 8px;
-	padding: 20px;
-	max-width: 1200px;
-	margin: 0 auto;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .manga-section h2 {
-	font-size: 24px;
-	margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .manga-section p {
-	font-size: 16px;
-	color: #555;
-	margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .manga-list {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .manga-item {
-	display: flex;
-	background: #f9f9f9;
-	border-radius: 8px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
+    display: flex;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .manga-image {
-	width: 150px;
-	height: auto;
-	object-fit: cover;
+    width: 150px;
+    height: auto;
+    object-fit: cover;
 }
 
 .manga-content {
-	padding: 15px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .manga-content h3 {
-	margin-top: 0;
-	margin-bottom: 10px;
-	font-size: 18px;
-	color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
 .manga-content p {
-	font-size: 14px;
-	color: #666;
-	margin-bottom: 15px;
-	line-height: 1.5;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
 /* Boutons En savoir plus */
 .manga-content .btn {
-	align-self: start;
-	background: #ff0000;
-	color: black;
-	border: none;
-	padding: 8px 12px;
-	border-radius: 14px;
-	cursor: pointer;
-	transition: background-color 0.3s ease;
+    align-self: start;
+    background: #ff0000;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .manga-content .btn:hover {
-	background: #aaaaaa;
+    background: #aaaaaa;
 }
 
 /* Section Roman Policier */
 .roman-section {
-	background: #ffffff;
-	border-radius: 8px;
-	padding: 20px;
-	max-width: 1200px;
-	margin: 20px  auto;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .roman-section h2 {
-	font-size: 24px;
-	margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
 .roman-section p {
-	font-size: 16px;
-	color: #555;
-	margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .roman-list {
-	display: grid;
-  	grid-template-columns: repeat(3, 1fr);
-  	gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .roman-item {
-	background: #f9f9f9;
-	border-radius: 8px;
-	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .roman-image {
-	width: 100%;
-	height: 200px;
-	object-fit: cover;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 .roman-content {
-	padding: 15px;
+    padding: 15px;
 }
 
 .roman-content h3 {
-	margin-top: 0;
-	margin-bottom: 10px;
-	font-size: 18px;
-	color: #333;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
 }
 
 .roman-content p {
-	font-size: 14px;
-	color: #666;
-	line-height: 1.5;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-	.roman-list {
-		display: flex;
-	flex-direction: column;
-	gap: 20px;
-	}
+    .roman-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 /* Footer class */
 footer {
-	background: #333;
-	color: white;
-	text-align: center;
-	padding: 10px;
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.library {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.library h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.book-card p {
+    margin-bottom: 20px;
+    max-height: 100px; /* Limite la hauteur maximale du paragraphe */
+    overflow: hidden; /* Cache le contenu débordant */
+    text-overflow: ellipsis; /* Ajoute des points de suspension pour le texte débordant */
+    white-space: nowrap; /* Empêche le texte de s'étendre sur plusieurs lignes */
+}
+
+.book-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.book-card img {
+    width: 100%;
+    height: 350px;
+    display: block;
+    object-fit: cover;
+}
+
+.book-card h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.book-card p {
+    color: #777;
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+
+.btn:hover {
+    background-color: #333;
+    transform: translateY(-5px);
 }
