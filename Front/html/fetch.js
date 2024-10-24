@@ -1,10 +1,36 @@
 console.log("hello world");
+
+//SEARCH
+const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
 const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector("#searchBtn");
+let results = [];
 
-const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
-//const search = "kafka";
-const mesLivres = document.querySelector("#mesLivres");
+//DISPLAY
+const mesLivres = document.querySelector("#mesLivres"); //Div créée pour test
+const bookGrid = document.querySelector("#book-grid");
+const bookCover = document.querySelector("#book-cover");
+const bookTitle = document.querySelector("#book-title");
+const bookAuthor = document.querySelector("#book-author");
+const bookLink = document.querySelector("#book-link");
+const bookCard = document.querySelector("#book-card");
+
+//============
+//pagination
+// let itemsPerPage = 10;
+// let currentPage = 1;
+
+// const pages = [];
+// const indexOfLastPage = currentPage * itemsPerPage;
+// const indexOfFirstPage = indexOfLastPage - itemsPerPage;
+// const currentItems = results.slice(indexOfFirstPage, indexOfLastPage);
+
+// for (let i = 0; i < Math.ceil(results.length / itemsPerPage); i++) {
+//   pages.push(i);
+// }
+
+//console.log(pages);
+//============
 
 async function getBooks(searchUser) {
   if (!searchUser) {
@@ -18,38 +44,66 @@ async function getBooks(searchUser) {
     const datas = await response.json();
     console.log(datas);
     displayBooks(datas);
-    //
   } catch (error) {
     console.log("erreur dans ton fetch", error);
   }
 }
-
 getBooks();
 
 searchBtn.addEventListener("click", function () {
+  results = []; //vider le tableau ?
   getBooks(searchInput.value);
   console.log(searchInput.value);
   searchInput.value = "";
 });
 
+function getIdInUrl() {
+  const queryString_url_id = window.location.search;
+  console.log("queryString_url_id", queryString_url_id);
+  const urlParams = new URLSearchParams(queryString_url_id);
+  console.log("urlParams", urlParams);
+  const theId = urlParams.get("id");
+  console.log("theId", theId);
+  // Convertir theId en nombre pour la comparaison
+  const numericId = Number(theId);
+}
+
 function displayBooks(datas) {
   mesLivres.innerHTML = "";
+  bookGrid.innerHTML = "";
 
-  let result = [];
-
-  if (datas.totalItems > 0 && datas.items) {
+  // totalItems meme niveau que items et kind dans datas
+  // - condition possibles ?
+  //pas de .length sur totalItems car c'est un nombre et items est un tableau
+  if (datas.totalItems > 0 && datas.items.length > 0) {
     datas.items.forEach((book) => {
       const title = book.volumeInfo.title;
+      const cover = book.volumeInfo.imageLinks.thumbnail;
+      const author = book.volumeInfo.authors;
+      const bookLink = document.createElement("a");
+      bookLink.href = `book.html?id=${book.id}`;
+      const bookCardDiv = document.createElement("div");
+      bookCardDiv.classList.add("book-card");
+      bookCardDiv.innerHTML = `<h2>${title}</h2>
+      <p>Auteur : ${author}</p>
+      <img src="${cover}" alt="cover" />
+      <a href="${link}" target="_blank">Lien vers le livre</a>`;
 
-      result.push(title);
-      console.log("result", result);
+      bookGrid.appendChild(bookCardDiv);
 
-      const li = document.createElement("li");
-      const link = document.createElement("a");
-      link.href = book.volumeInfo.previewLink;
-      link.textContent = title;
-      li.appendChild(link);
-      mesLivres.appendChild(li);
+      results.push(title);
+      // console.log("results", results);
+      console.log("totalItems", datas.totalItems);
+      console.log("title du book", title);
+      ///////// création de li pour le test
+      // const li = document.createElement("li");
+      // li.textContent = title;
+      // const link = document.createElement("a");
+      // link.href = book.volumeInfo.previewLink;
+      // link.textContent = title;
+      // li.appendChild(link);
+      // mesLivres.appendChild(li);
+      ///////// fin du test
     });
   } else {
     const li = document.createElement("li");
