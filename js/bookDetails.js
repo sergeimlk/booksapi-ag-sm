@@ -1,5 +1,7 @@
 // Définir les constantes et sélectionner les éléments DOM :
-const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
+const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";// Définir la clé API.
+
+ 
 const monLivre = document.querySelector("#monLivre");
 const bookGrid = document.querySelector("#book-grid");
 const bookCover = document.querySelector("#book-cover");
@@ -14,7 +16,6 @@ const bookAuthor = document.querySelector("#book-author");
 //   navbarMenu.classList.toggle("show");
 // });
 
-// Définir la clé API.
 async function getBookDetails() {
     try {
         const response = await fetch(
@@ -28,40 +29,52 @@ async function getBookDetails() {
     }
 }
 
+// Définir une fonction asynchrone pour récupérer les détails du livre :
+
 
 // Sélectionner les éléments HTML où les informations du livre seront affichées (couverture, titre, auteur, etc.).
-if (datas.totalItems > 0 && datas.items.length > 0) {
-    datas.items.forEach((book) => {
-        const bookId = book.id;
-        const title = book.volumeInfo.title;
-        const cover =
-            book.volumeInfo.imageLinks?.thumbnail || "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! changer le lien
-        const author = book.volumeInfo.authors;
-        const bookLink = document.createElement("a");
-        bookLink.href = `BooksDetail.html?id=${bookId}`;
-        const bookCardDiv = document.createElement("div");
-        bookCardDiv.classList.add("book-card");
-        bookCardDiv.innerHTML =
-            `<img src="${cover}" alt="cover" />
-      <h2>${title}</h2>
-      <p>Auteur : ${author}</p>
-      <p>Description : ${desc}</p>
-     `;
-        bookLink.appendChild(bookCardDiv);
-        bookGrid.appendChild(bookLink);
 
-        requestIdleCallback.push(title);
-        console.log("results", results);
-        console.log("totalItems", datas.totalItems);
-        console.log("titre du book", title);
-        console.log("id book", bookId);
-    });
 
-} else {
-    const li = document.createElement("li");
-    li.textContent = "Aucun livre trouvé";
-    mesLivres.appendChild(li);
-};
+
+// if (datas.totalItems > 0 && datas.items.length > 0) {
+//     datas.items.forEach((book) => {
+//         const bookId = book.id;
+//         const title = book.volumeInfo.title;
+//         const cover =
+//             book.volumeInfo.imageLinks?.thumbnail || "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! changer le lien
+//         const author = book.volumeInfo.authors;
+//         const bookLink = document.createElement("a");
+//         bookLink.href = `BooksDetail.html?id=${bookId}`;
+//         const bookCardDiv = document.createElement("div");
+//         bookCardDiv.classList.add("book-card");
+//         bookCardDiv.innerHTML =
+//             `<img src="${cover}" alt="cover" />
+//       <h2>${title}</h2>
+//       <p>Auteur : ${author}</p>
+//       <p>Description : ${desc}</p>
+//      `;
+//         bookLink.appendChild(bookCardDiv);
+//         bookGrid.appendChild(bookLink);
+
+//         requestIdleCallback.push(title);
+//         console.log("results", results);
+//         console.log("totalItems", datas.totalItems);
+//         console.log("titre du book", title);
+//         console.log("id book", bookId);
+//     });
+
+// } else {
+//     const li = document.createElement("li");
+//     li.textContent = "Aucun livre trouvé";
+//     mesLivres.appendChild(li);
+// };
+
+
+
+// Envoyer une requête à l'API Google Books avec l'ID du livre.
+
+
+
 
 // Ajouter un écouteur d'événement pour basculer l'affichage d'un EXTRAIT DU LIVRE (ouvre une nouvelle page).
 const handleEvent = (event) => {
@@ -80,7 +93,6 @@ searchInput.addEventListener('keypress', handleEvent);
 
 
 
-// Définir une fonction asynchrone pour récupérer les détails du livre :
 
 // Envoyer une requête à l'API Google Books avec l'ID du livre.
 // Convertir la réponse en JSON.
@@ -95,7 +107,6 @@ searchInput.addEventListener('keypress', handleEvent);
 // Étapes en Détail
 // Définir les constantes et sélectionner les éléments DOM :
 
-// Définir la clé API.
 // Sélectionner les éléments HTML où les informations du livre seront affichées.
 // Ajouter un écouteur d'événement pour le bouton de navigation :
 
