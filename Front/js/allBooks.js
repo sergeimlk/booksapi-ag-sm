@@ -5,7 +5,9 @@ const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
 const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector("#searchBtn");
 const searchBarSpace = document.querySelector(".searchBar");
-console.log("searchBarSpace:", searchBarSpace);
+const title = document.querySelector("h1");
+
+console.log("title :", title);
 let results = [];
 
 //============
@@ -50,7 +52,11 @@ searchBtn.addEventListener("click", function () {
     getBooks(searchInput.value);
     console.log(searchInput.value);
     searchInput.value = "";
-    searchBarSpace.innerHTML = "";
+    //searchBarSpace.innerHTML = "";
+    title.innerHTML = "Résultats de la recherche :";
+    searchBarSpace.innerHTML = "Effectuez une autre recherche : ";
+    searchBarSpace.appendChild(searchInput);
+    searchBarSpace.appendChild(searchBtn);
   } else {
     const searchAlert = document.createElement("p");
     searchAlert.innerHTML = "Veuillez entrer plus de 2 caractères";
@@ -98,6 +104,7 @@ function displayBooks(datas) {
       console.log("totalItems", datas.totalItems);
       console.log("title du book", title);
       console.log("id du book", bookId);
+      console.log("image links", book.volumeInfo.imageLinks);
     });
   } else {
     bookGrid.innerHTML = "Aucun livre trouvé";

@@ -48,6 +48,11 @@ body {
 	color: white;
 }
 
+.allBookLink {
+	margin-block: 10px;
+}
+
+
 /* Responsive Styling menu burger*/
 @media (max-width: 768px) {
 	.navbar-menu {
@@ -107,8 +112,7 @@ body {
 	position: relative;
 	left: 0;
 	min-height: 100vh;
-	background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png')
-		no-repeat center center/cover;
+	background: url('Front/img/Librairie_solidaire-secours-populaire-u-bordeaux-montaigne_max460x960.png') no-repeat center center/cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -263,7 +267,7 @@ body {
 	border-radius: 8px;
 	padding: 20px;
 	max-width: 1200px;
-	margin: 20px  auto;
+	margin: 20px auto;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -280,8 +284,8 @@ body {
 
 .roman-list {
 	display: grid;
-  	grid-template-columns: repeat(3, 1fr);
-  	gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
 }
 
 .roman-item {
@@ -321,8 +325,8 @@ body {
 @media (max-width: 768px) {
 	.roman-list {
 		display: flex;
-	flex-direction: column;
-	gap: 20px;
+		flex-direction: column;
+		gap: 20px;
 	}
 }
 

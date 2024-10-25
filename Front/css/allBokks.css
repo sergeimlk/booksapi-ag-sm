@@ -120,8 +120,23 @@ h1 {
     color: #333;
 }
 
+.searchBar {
+    margin-bottom: 30px;
+
+}
+
+.searchBar input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
 .book-grid {
     display: grid;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
@@ -140,9 +155,9 @@ h1 {
 }
 
 .book-card img {
-    width: 100%;
-    height: 550px;
-    display: block;
+    max-width: 100%;
+    min-height: 350px;
+
 }
 
 .book-card h2 {
