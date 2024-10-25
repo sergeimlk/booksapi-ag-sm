@@ -41,6 +41,28 @@ body {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 25px;
+    width: 350px;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    font-size: 16px;
+    width: 350px;
+}
+
 /* Menu burger */
 .navbar-toggle {
     display: none;
@@ -74,28 +96,28 @@ body {
 
 /* Bouton Sign In */
 .btn-secondary {
-    background-color: #cccccc; 
+    background-color: #cccccc;
     color: black;
     border: 1px solid #cccccc;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background-color: #aaaaaa; 
+    background-color: #aaaaaa;
     color: white;
 }
 
 /* Bouton Register */
 .btn-primary {
-    background-color: #000000; 
+    background-color: #000000;
     color: white;
     border: 1px solid #000000;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: #333333; 
-    color: #f0f0f0; 
+    background-color: #333333;
+    color: #f0f0f0;
 }
 
 .btn {
@@ -110,16 +132,16 @@ body {
     align-items: center;
     padding: 20px;
     max-width: 1200px;
-    margin: auto; 
+    margin: auto;
     background-color: white;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .book-cover img {
-    width: 200px; 
+    width: 200px;
     height: auto;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 .book-info {
@@ -129,7 +151,7 @@ body {
 /* Styles responsive */
 @media (max-width: 768px) {
     .book-detail {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .book-cover, .book-info {
@@ -138,40 +160,40 @@ body {
 
     /* Bouton "Ajouter au Panier" */
     .btn-primary {
-        background-color: #000000; 
+        background-color: #000000;
         color: white;
-        transition: background-color 0.3s ease, color 0.3s ease; 
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .btn-primary:hover {
         background-color: #333333;
-        color: #f0f0f0; 
+        color: #f0f0f0;
     }
 
     /* Bouton "Lire un Extrait"  */
     .btn-secondary {
-        background-color: #cccccc; 
+        background-color: #cccccc;
         color: black;
-        transition: background-color 0.3s ease, color 0.3s ease; 
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .btn-secondary:hover {
-        background-color: #aaaaaa; 
-        color: white; 
+        background-color: #aaaaaa;
+        color: white;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 24px; 
+        font-size: 24px;
     }
 
     h2 {
-        font-size: 18px; 
+        font-size: 18px;
     }
 
     .btn {
-        width: 100%; 
+        width: 100%;
         margin: 5px;
     }
 
@@ -181,8 +203,8 @@ body {
     }
 
     .btn-secondary:hover {
-        background-color: #aaaaaa; 
-        color: white; 
+        background-color: #aaaaaa;
+        color: white;
     }
 }
 
@@ -191,6 +213,6 @@ footer {
     background: #333;
     color: white;
     text-align: center;
-    padding: 20px 0; 
-    position: relative; 
+    padding: 20px 0;
+    position: relative;
 }

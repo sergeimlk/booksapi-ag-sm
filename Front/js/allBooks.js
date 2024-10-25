@@ -82,7 +82,7 @@ function displayBooks(datas) {
       const cover =
         book.volumeInfo.imageLinks?.medium ||
         book.volumeInfo.imageLinks?.thumbnail ||
-        "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! et il y a que des thumbnails ou qoui
+        "/img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! et il y a que des thumbnails ou qoui
       //TODO : changer le lien de l'image par défaut & verifier si les autres elements existent aussi (author, etc)
 
       //création des éléments du DOM

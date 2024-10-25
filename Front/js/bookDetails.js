@@ -29,4 +29,17 @@ getBookDetails();
 function displayBookDetails(datas) {
   console.log(datas);
   console.log(datas.volumeInfo.title);
+  bookDetails.innerHTML = "";
+  const img = document.createElement("img");
+  const title = document.createElement("h1");
+  const auteur = document.createElement("h2");
+  const description = document.createElement("p");
+  img.src = datas.volumeInfo.imageLinks.thumbnail;
+  title.innerHTML = datas.volumeInfo.title;
+  auteur.innerHTML = datas.volumeInfo.authors || "d'un illustre inconnu";
+  description.innerHTML = datas.volumeInfo.description || "";
+  bookDetails.appendChild(img);
+  bookDetails.appendChild(title);
+  bookDetails.appendChild(auteur);
+  bookDetails.appendChild(description);
 }
