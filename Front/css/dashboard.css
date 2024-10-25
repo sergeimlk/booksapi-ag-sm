@@ -23,7 +23,8 @@
 /* Media Query para pantallas más pequeñas */
 @media (max-width: 768px) {
 	.section-item {
-		flex: 1 1 45%; /* En pantallas medianas, los items ocupan el 45% del contenedor */
+		flex: 1 1 45%;
+		/* En pantallas medianas, los items ocupan el 45% del contenedor */
 		margin-bottom: 20px;
 	}
 }
@@ -31,7 +32,8 @@
 /* Media Query para pantallas muy pequeñas (móviles) */
 @media (max-width: 480px) {
 	.section-item {
-		flex: 1 1 100%; /* En pantallas pequeñas, cada item ocupa el 100% del ancho */
+		flex: 1 1 100%;
+		/* En pantallas pequeñas, cada item ocupa el 100% del ancho */
 		margin-bottom: 20px;
 	}
 }

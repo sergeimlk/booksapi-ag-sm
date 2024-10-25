@@ -34,7 +34,8 @@ function displayBookDetails(datas) {
   const title = document.createElement("h1");
   const auteur = document.createElement("h2");
   const description = document.createElement("p");
-  img.src = datas.volumeInfo.imageLinks.thumbnail;
+  img.src = datas.volumeInfo.imageLinks?.thumbnail || "img/default-cover.jpg";
+
   title.innerHTML = datas.volumeInfo.title;
   auteur.innerHTML = datas.volumeInfo.authors || "d'un illustre inconnu";
   description.innerHTML = datas.volumeInfo.description || "";
