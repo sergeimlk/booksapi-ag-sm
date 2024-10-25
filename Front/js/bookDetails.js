@@ -1,4 +1,5 @@
 console.log("hello from bookDetails.js");
+
 const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
 
 const queryString_url_id = window.location.search;
@@ -15,7 +16,7 @@ async function getBookDetails() {
     );
     const datas = await response.json();
     console.log(datas);
-    // displayBookDetails(datas);
+    displayBookDetails(datas);
   } catch (error) {
     console.log("erreur dans ton fetch", error);
   }
@@ -24,16 +25,6 @@ async function getBookDetails() {
 getBookDetails();
 
 function displayBookDetails(datas) {
-  const book = datas.volumeInfo;
-  console.log(book);
-  const bookDetails = document.createElement("div");
-  bookDetails.classList.add("bookDetails");
-  bookDetails.innerHTML = `
-    <h2>${book.title}</h2>
-    <h3>${book.authors}</h3>
-    <img src="${book.imageLinks.thumbnail}" alt="${book.title}">
-    <p>${book.description}</p>
-    <a href="${book.previewLink}" target="_blank">Preview</a>
-    `;
-  mesLivres.appendChild(bookDetails);
+  console.log(datas);
+  console.log(datas.volumeInfo.title);
 }

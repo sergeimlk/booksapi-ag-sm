@@ -1,19 +1,12 @@
-console.log("hello world");
+console.log("hello from allBooks.js");
 
 //SEARCH
 const apiKey = "AIzaSyDQrL0-MwiXKvSdzTr6E5KtVcanozHoG90";
 const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector("#searchBtn");
+const searchBarSpace = document.querySelector(".searchBar");
+console.log("searchBarSpace:", searchBarSpace);
 let results = [];
-
-//DISPLAY
-const mesLivres = document.querySelector("#mesLivres"); //Div créée pour test
-const bookGrid = document.querySelector("#book-grid");
-const bookCover = document.querySelector("#book-cover");
-const bookTitle = document.querySelector("#book-title");
-const bookAuthor = document.querySelector("#book-author");
-const bookLink = document.querySelector("#book-link");
-const bookCard = document.querySelector("#book-card");
 
 //============
 //pagination
@@ -51,35 +44,52 @@ async function getBooks(searchUser) {
 getBooks();
 
 searchBtn.addEventListener("click", function () {
+  console.log("search input de l'addEventListener", searchInput.value);
   results = []; //vider le tableau ?
-  getBooks(searchInput.value);
-  console.log(searchInput.value);
-  searchInput.value = "";
+  if (searchInput.value.length > 2) {
+    getBooks(searchInput.value);
+    console.log(searchInput.value);
+    searchInput.value = "";
+    searchBarSpace.innerHTML = "";
+  } else {
+    const searchAlert = document.createElement("p");
+    searchAlert.innerHTML = "Veuillez entrer plus de 2 caractères";
+    searchBarSpace.appendChild(searchAlert);
+  }
 });
 
 function displayBooks(datas) {
-  mesLivres.innerHTML = "";
+  console.log("results", results);
+  //Ciblage de la div concernée par l'injection des élèments
+  const bookGrid = document.querySelector("#book-grid");
   bookGrid.innerHTML = "";
 
   // totalItems meme niveau que items et kind dans datas
-  // - condition possibles ?
+  // - TODO : regarder les condition possibles ? (les + efficaces)
   //pas de .length sur totalItems car c'est un nombre et items est un tableau
   if (datas.totalItems > 0 && datas.items.length > 0) {
     datas.items.forEach((book) => {
+      //affectation variable <=> element de datas
       const bookId = book.id;
       const title = book.volumeInfo.title;
+      const author = book.volumeInfo.authors || "d'un illustre inconnu";
       const cover =
-        book.volumeInfo.imageLinks?.thumbnail || "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! changer le lien
-      const author = book.volumeInfo.authors;
+        book.volumeInfo.imageLinks?.medium ||
+        book.volumeInfo.imageLinks?.thumbnail ||
+        "img/default-cover.jpg"; //parce qu'apparemment il y a des livres sans cover ! et il y a que des thumbnails ou qoui
+      //TODO : changer le lien de l'image par défaut & verifier si les autres elements existent aussi (author, etc)
+
+      //création des éléments du DOM
       const bookLink = document.createElement("a");
       bookLink.href = `BooksDetail.html?id=${bookId}`;
+      bookLink.target = "_blank";
+
       const bookCardDiv = document.createElement("div");
       bookCardDiv.classList.add("book-card");
       bookCardDiv.innerHTML = `<h2>${title}</h2>
       <p>Auteur : ${author}</p>
       <img src="${cover}" alt="cover" />
      `;
-      //<a href="${link}" target="_blank">Lien vers le livre</a>
       bookLink.appendChild(bookCardDiv);
       bookGrid.appendChild(bookLink);
 
@@ -88,20 +98,8 @@ function displayBooks(datas) {
       console.log("totalItems", datas.totalItems);
       console.log("title du book", title);
       console.log("id du book", bookId);
-
-      ///////// création de li pour le test
-      // const li = document.createElement("li");
-      // li.textContent = title;
-      // const link = document.createElement("a");
-      // link.href = book.volumeInfo.previewLink;
-      // link.textContent = title;
-      // li.appendChild(link);
-      // mesLivres.appendChild(li);
-      ///////// fin du test
     });
   } else {
-    const li = document.createElement("li");
-    li.textContent = "Aucun livre trouvé";
-    mesLivres.appendChild(li);
+    bookGrid.innerHTML = "Aucun livre trouvé";
   }
 }

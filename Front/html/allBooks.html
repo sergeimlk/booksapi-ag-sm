@@ -28,20 +28,11 @@
 
     <main class="library">
       <h1>Découvrez nos Livres</h1>
-      <div class="searchBar">
+      <div class="searchBar" id="searchBar">
         <input type="text" id="search" placeholder="Rechercher un livre..." />
         <button class="btn btn-primary" id="searchBtn">Rechercher</button>
       </div>
       <div class="book-grid" id="book-grid">
-        <!-- pour test  -->
-        <div class="test">
-          <div id="mesLivres">
-            <ul>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-        <!-- fin du test -->
         <div class="book-card" id="book-card">
           <img
             src="../img/OnePiece.jpeg"
@@ -85,6 +76,6 @@
           navbarMenu.classList.toggle("show");
         });
     </script>
-    <script src="../js/fetch.js"></script>
+    <script src="../js/allBooks.js"></script>
   </body>
 </html>
