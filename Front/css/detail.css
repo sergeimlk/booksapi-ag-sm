@@ -41,6 +41,8 @@ body {
     text-decoration: none;
 }
 
+eee
+
 /* Menu burger */
 .navbar-toggle {
     display: none;
@@ -114,6 +116,12 @@ body {
     background-color: white;
     border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#titre h1 {
+    padding: 40px 0 40px 160px;
+    font-size: 36px; 
+    margin: 0;
 }
 
 .book-cover img {
